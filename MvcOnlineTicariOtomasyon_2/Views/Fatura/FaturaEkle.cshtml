@@ -1,0 +1,38 @@
+﻿@model MvcOnlineTicariOtomasyon_2.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Fatura Girişi</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.FaturaSeriNo, "Fatura Seri No")
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.FaturaSiraNo, "Fatura Sıra No")
+    @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.VergiDairesi, "Vergi Dairesi")
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Tarih, "Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Saat, "Saat")
+    @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.TeslimEden, "Teslim Eden")
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.TeslimAlan, "Teslim Alan")
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+
+    <br />
+
+    <div class="d-flex justify-content-end align-items-center">
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
